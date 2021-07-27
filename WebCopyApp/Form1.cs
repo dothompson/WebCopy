@@ -4,7 +4,6 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,7 +21,7 @@ namespace WebCopy
             InitializeComponent();
             if (!txtFromURL.Text.EndsWith("/"))
             {
-                txtFromURL.Text = txtFromURL.Text + "/";
+                txtFromURL.Text += "/";
             }
             FileApiServer.BaseAddress = new Uri(txtFromURL.Text);
             FileApiServer.DefaultRequestHeaders.Accept.Clear();
@@ -33,12 +32,12 @@ namespace WebCopy
             //FileApiServer.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(cred));
         }
 
-        private void btnStartDownload_Click(object sender, EventArgs e)
+        private void BtnStartDownload_Click(object sender, EventArgs e)
         {
             //refresh the endpoint
             if (!txtFromURL.Text.EndsWith("/"))
             {
-                txtFromURL.Text = txtFromURL.Text + "/";
+                txtFromURL.Text += "/";
             }
             FileApiServer.BaseAddress = new Uri(txtFromURL.Text);
             lbLog.Items.Add("Starting App");
@@ -227,12 +226,12 @@ namespace WebCopy
             return objFile;
         }
 
-        private void txtDestinationFolder_TextChanged(object sender, EventArgs e)
+        private void TxtDestinationFolder_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnPickFolder_Click(object sender, EventArgs e)
+        private void BtnPickFolder_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
             {

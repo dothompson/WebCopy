@@ -14,7 +14,7 @@ namespace WebCopy.Controllers
         }
 
         // POST api/<controller>
-        public bool Post([FromBody]FileToCopy inFileStatus)
+        public bool Post([FromBody] FileToCopy inFileStatus)
         {
             FileData objFileActions = new FileData();
             return objFileActions.ReportComplete(inFileStatus);

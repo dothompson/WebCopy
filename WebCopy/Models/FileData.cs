@@ -1,8 +1,8 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Data;
 using System.IO;
 using System.Web;
-using NLog;
 
 namespace WebCopy.Models
 {

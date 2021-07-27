@@ -17,7 +17,7 @@ namespace WebCopy.Controllers
         //    Retriever objServerRetriever = new Retriever();
         //    return objServerRetriever.GetServiceTask(id);
         //}
-        
+
         //// POST api/<controller>
         //public bool Post([FromBody]FileToCopy inFileStatus)
         //{
@@ -30,15 +30,15 @@ namespace WebCopy.Controllers
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>
-        public HttpResponseMessage Get([FromUri]string filename)
+        public HttpResponseMessage Get([FromUri] string filename)
         {
-            
+
 
             string path = HttpContext.Current.Server.MapPath("~/ToDownload/" + filename);
             if (!File.Exists(path))
             {
                 //throw new HttpResponseException("The file does not exist.", HttpStatusCode.NotFound);
-                throw new HttpResponseException( HttpStatusCode.NotFound);
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
             try
@@ -120,7 +120,7 @@ namespace WebCopy.Controllers
             catch (IOException)
             {
                 //throw new HttpResponseException("A generic error occured. Please try again later.", HttpStatusCode.InternalServerError);
-                throw new HttpResponseException( HttpStatusCode.InternalServerError);
+                throw new HttpResponseException(HttpStatusCode.InternalServerError);
             }
         }
 
@@ -129,7 +129,7 @@ namespace WebCopy.Controllers
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>
-        public HttpResponseMessage Post([FromUri]string filename)
+        public HttpResponseMessage Post([FromUri] string filename)
         {
             var task = this.Request.Content.ReadAsStreamAsync();
             task.Wait();
@@ -145,7 +145,7 @@ namespace WebCopy.Controllers
             catch (IOException)
             {
                 //throw new HttpResponseException("A generic error occured. Please try again later.", HttpStatusCode.InternalServerError);
-                throw new HttpResponseException( HttpStatusCode.InternalServerError);
+                throw new HttpResponseException(HttpStatusCode.InternalServerError);
             }
 
             HttpResponseMessage response = new HttpResponseMessage

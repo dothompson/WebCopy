@@ -72,7 +72,7 @@
             this.txtDestinationFolder.Size = new System.Drawing.Size(345, 20);
             this.txtDestinationFolder.TabIndex = 3;
             this.txtDestinationFolder.Text = "C:\\WebCopyDownloads";
-            this.txtDestinationFolder.TextChanged += new System.EventHandler(this.txtDestinationFolder_TextChanged);
+            this.txtDestinationFolder.TextChanged += new System.EventHandler(this.TxtDestinationFolder_TextChanged);
             // 
             // btnStartDownload
             // 
@@ -82,7 +82,7 @@
             this.btnStartDownload.TabIndex = 4;
             this.btnStartDownload.Text = "Start Download";
             this.btnStartDownload.UseVisualStyleBackColor = true;
-            this.btnStartDownload.Click += new System.EventHandler(this.btnStartDownload_Click);
+            this.btnStartDownload.Click += new System.EventHandler(this.BtnStartDownload_Click);
             // 
             // lbLog
             // 
@@ -119,7 +119,7 @@
             this.btnPickFolder.TabIndex = 8;
             this.btnPickFolder.Text = "Pick Folder";
             this.btnPickFolder.UseVisualStyleBackColor = true;
-            this.btnPickFolder.Click += new System.EventHandler(this.btnPickFolder_Click);
+            this.btnPickFolder.Click += new System.EventHandler(this.BtnPickFolder_Click);
             // 
             // Form1
             // 

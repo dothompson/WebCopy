@@ -1,21 +1,12 @@
-﻿using WebCopy.Framework;
-using NLog;
+﻿using NLog;
+using RestSharp;
 using System;
-using System.Data;
 using System.IO;
-using System.Linq;
-using System.Management;
-using System.Net.NetworkInformation;
-using System.Net.Sockets;
 using System.Reflection;
 using System.ServiceProcess;
-using System.Timers;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
-using RestSharp;
+using System.Timers;
+using WebCopy.Framework;
 
 namespace WebCopy
 {
